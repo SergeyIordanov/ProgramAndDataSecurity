@@ -45,19 +45,19 @@ namespace DataSecurity1.NotepadMethod
         private void Encrypt(string alph, string key, bool useXor = false)
         {
             string text = inputText.Text;
-            var pad = new VerrnamEncryptor(alph);
+            var encryptor = new VerrnamEncryptor(alph);
 
             try
             {
                 if (useXor)
                 {
-                    resultEncText.Text = pad.Crypt_XOR(text, key);
-                    resultDecText.Text = pad.Crypt_XOR(resultEncText.Text, key);
+                    resultEncText.Text = encryptor.Crypt_XOR(text, key);
+                    resultDecText.Text = encryptor.Crypt_XOR(resultEncText.Text, key);
                 }
                 else
                 {
-                    resultEncText.Text = pad.Crypt(text, key, false);
-                    resultDecText.Text = pad.Crypt(resultEncText.Text, key, true);
+                    resultEncText.Text = encryptor.Crypt(text, key, false);
+                    resultDecText.Text = encryptor.Crypt(resultEncText.Text, key, true);
                 }
             }
             catch (KeyNotFoundException)

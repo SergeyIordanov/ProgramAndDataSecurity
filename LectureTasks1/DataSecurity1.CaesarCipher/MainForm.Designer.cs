@@ -1,4 +1,4 @@
-﻿namespace DataSecurity1.NotepadMethod
+﻿namespace DataSecurity1.CaesarCipher
 {
     partial class MainForm
     {
@@ -35,36 +35,37 @@
             this.alphComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.methodComboBox = new System.Windows.Forms.ComboBox();
             this.alphTextBox = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.resultDecText = new System.Windows.Forms.RichTextBox();
-            this.keyTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.shiftNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.enAlphTextBox = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // inputText
             // 
             this.inputText.Location = new System.Drawing.Point(16, 25);
             this.inputText.Name = "inputText";
-            this.inputText.Size = new System.Drawing.Size(378, 74);
+            this.inputText.Size = new System.Drawing.Size(378, 122);
             this.inputText.TabIndex = 0;
             this.inputText.Text = "";
             // 
             // resultEncText
             // 
-            this.resultEncText.Location = new System.Drawing.Point(16, 120);
+            this.resultEncText.Location = new System.Drawing.Point(16, 170);
             this.resultEncText.Name = "resultEncText";
             this.resultEncText.ReadOnly = true;
-            this.resultEncText.Size = new System.Drawing.Size(184, 106);
+            this.resultEncText.Size = new System.Drawing.Size(184, 90);
             this.resultEncText.TabIndex = 1;
             this.resultEncText.Text = "";
             // 
             // EncryptButton
             // 
-            this.EncryptButton.Location = new System.Drawing.Point(403, 188);
+            this.EncryptButton.Location = new System.Drawing.Point(400, 222);
             this.EncryptButton.Name = "EncryptButton";
             this.EncryptButton.Size = new System.Drawing.Size(218, 38);
             this.EncryptButton.TabIndex = 2;
@@ -75,7 +76,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 104);
+            this.label1.Location = new System.Drawing.Point(13, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
@@ -111,29 +112,9 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Text";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(397, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Select method";
-            // 
-            // methodComboBox
-            // 
-            this.methodComboBox.FormattingEnabled = true;
-            this.methodComboBox.Items.AddRange(new object[] {
-            "No XOR",
-            "Use XOR"});
-            this.methodComboBox.Location = new System.Drawing.Point(484, 52);
-            this.methodComboBox.Name = "methodComboBox";
-            this.methodComboBox.Size = new System.Drawing.Size(134, 21);
-            this.methodComboBox.TabIndex = 9;
-            // 
             // alphTextBox
             // 
-            this.alphTextBox.Location = new System.Drawing.Point(403, 136);
+            this.alphTextBox.Location = new System.Drawing.Point(400, 101);
             this.alphTextBox.Name = "alphTextBox";
             this.alphTextBox.ReadOnly = true;
             this.alphTextBox.Size = new System.Drawing.Size(218, 46);
@@ -143,7 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(400, 120);
+            this.label5.Location = new System.Drawing.Point(397, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 12;
@@ -152,7 +133,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(207, 104);
+            this.label6.Location = new System.Drawing.Point(207, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 14;
@@ -160,41 +141,75 @@
             // 
             // resultDecText
             // 
-            this.resultDecText.Location = new System.Drawing.Point(210, 120);
+            this.resultDecText.Location = new System.Drawing.Point(210, 170);
             this.resultDecText.Name = "resultDecText";
             this.resultDecText.ReadOnly = true;
-            this.resultDecText.Size = new System.Drawing.Size(184, 106);
+            this.resultDecText.Size = new System.Drawing.Size(184, 90);
             this.resultDecText.TabIndex = 13;
             this.resultDecText.Text = "";
-            // 
-            // keyTextBox
-            // 
-            this.keyTextBox.Location = new System.Drawing.Point(434, 79);
-            this.keyTextBox.Name = "keyTextBox";
-            this.keyTextBox.Size = new System.Drawing.Size(184, 20);
-            this.keyTextBox.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(400, 82);
+            this.label7.Location = new System.Drawing.Point(397, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Key:";
+            this.label7.Text = "Shift (1 - 20):";
+            // 
+            // shiftNumericUpDown
+            // 
+            this.shiftNumericUpDown.Location = new System.Drawing.Point(484, 52);
+            this.shiftNumericUpDown.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.shiftNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shiftNumericUpDown.Name = "shiftNumericUpDown";
+            this.shiftNumericUpDown.Size = new System.Drawing.Size(134, 20);
+            this.shiftNumericUpDown.TabIndex = 17;
+            this.shiftNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shiftNumericUpDown.ValueChanged += new System.EventHandler(this.shiftNumericUpDown_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(397, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Encrypted alphabet";
+            // 
+            // enAlphTextBox
+            // 
+            this.enAlphTextBox.Location = new System.Drawing.Point(400, 170);
+            this.enAlphTextBox.Name = "enAlphTextBox";
+            this.enAlphTextBox.ReadOnly = true;
+            this.enAlphTextBox.Size = new System.Drawing.Size(218, 46);
+            this.enAlphTextBox.TabIndex = 18;
+            this.enAlphTextBox.Text = "";
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(628, 237);
+            this.ClientSize = new System.Drawing.Size(628, 269);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.enAlphTextBox);
+            this.Controls.Add(this.shiftNumericUpDown);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.keyTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.resultDecText);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.alphTextBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.methodComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.alphComboBox);
@@ -206,7 +221,8 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Verrnam encryptor";
+            this.Text = "Caesar encryptor";
+            ((System.ComponentModel.ISupportInitialize)(this.shiftNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,14 +237,14 @@
         private System.Windows.Forms.ComboBox alphComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox methodComboBox;
         private System.Windows.Forms.RichTextBox alphTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox resultDecText;
-        private System.Windows.Forms.TextBox keyTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown shiftNumericUpDown;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox enAlphTextBox;
     }
 }
 
