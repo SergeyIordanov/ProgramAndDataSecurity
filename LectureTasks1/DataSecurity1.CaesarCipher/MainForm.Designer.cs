@@ -43,6 +43,10 @@
             this.shiftNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.enAlphTextBox = new System.Windows.Forms.RichTextBox();
+            this.cryptanalysisButton = new System.Windows.Forms.Button();
+            this.cryptanalysisResultRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.hideLinkLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.shiftNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +63,7 @@
             this.resultEncText.Location = new System.Drawing.Point(16, 170);
             this.resultEncText.Name = "resultEncText";
             this.resultEncText.ReadOnly = true;
-            this.resultEncText.Size = new System.Drawing.Size(184, 90);
+            this.resultEncText.Size = new System.Drawing.Size(184, 55);
             this.resultEncText.TabIndex = 1;
             this.resultEncText.Text = "";
             // 
@@ -198,10 +202,53 @@
             this.enAlphTextBox.TabIndex = 18;
             this.enAlphTextBox.Text = "";
             // 
+            // cryptanalysisButton
+            // 
+            this.cryptanalysisButton.Location = new System.Drawing.Point(16, 231);
+            this.cryptanalysisButton.Name = "cryptanalysisButton";
+            this.cryptanalysisButton.Size = new System.Drawing.Size(184, 29);
+            this.cryptanalysisButton.TabIndex = 20;
+            this.cryptanalysisButton.Text = "Cryptanalysis";
+            this.cryptanalysisButton.UseVisualStyleBackColor = true;
+            this.cryptanalysisButton.Click += new System.EventHandler(this.cryptanalysisButton_Click);
+            // 
+            // cryptanalysisResultRichTextBox
+            // 
+            this.cryptanalysisResultRichTextBox.Location = new System.Drawing.Point(145, 289);
+            this.cryptanalysisResultRichTextBox.Name = "cryptanalysisResultRichTextBox";
+            this.cryptanalysisResultRichTextBox.ReadOnly = true;
+            this.cryptanalysisResultRichTextBox.Size = new System.Drawing.Size(333, 115);
+            this.cryptanalysisResultRichTextBox.TabIndex = 21;
+            this.cryptanalysisResultRichTextBox.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(252, 268);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Cryptanalysis result";
+            // 
+            // hideLinkLabel
+            // 
+            this.hideLinkLabel.AutoSize = true;
+            this.hideLinkLabel.Location = new System.Drawing.Point(354, 268);
+            this.hideLinkLabel.Name = "hideLinkLabel";
+            this.hideLinkLabel.Size = new System.Drawing.Size(27, 13);
+            this.hideLinkLabel.TabIndex = 23;
+            this.hideLinkLabel.TabStop = true;
+            this.hideLinkLabel.Text = "hide";
+            this.hideLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.hideLinkLabel_LinkClicked);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(628, 269);
+            this.Controls.Add(this.hideLinkLabel);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cryptanalysisResultRichTextBox);
+            this.Controls.Add(this.cryptanalysisButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.enAlphTextBox);
             this.Controls.Add(this.shiftNumericUpDown);
@@ -245,6 +292,10 @@
         private System.Windows.Forms.NumericUpDown shiftNumericUpDown;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox enAlphTextBox;
+        private System.Windows.Forms.Button cryptanalysisButton;
+        private System.Windows.Forms.RichTextBox cryptanalysisResultRichTextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel hideLinkLabel;
     }
 }
 
